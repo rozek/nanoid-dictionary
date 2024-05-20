@@ -11,7 +11,15 @@
   "files": [
     "dist"
   ],
-  "types": "dist/nanoid-dictionary.d.ts",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "require": "./dist/nanoid-dictionary.cjs",
+      "browser": "./dist/nanoid-dictionary.umd.js",
+      "default": "./dist/nanoid-dictionary.modern.js"
+    }
+  },
   "scripts": {
     "build": "rollup -c && tsc"
   },
