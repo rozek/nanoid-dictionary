@@ -23,8 +23,8 @@
     ".": {
       "types": "./index.d.ts",
       "require": "./dist/nanoid-dictionary.cjs",
-      "browser": "./dist/nanoid-dictionary.umd.js",
-      "default": "./dist/nanoid-dictionary.modern.js"
+      "browser": "./dist/nanoid-dictionary.esm.js",
+      "default": "./dist/nanoid-dictionary.esm.js"
     }
   },
   "scripts": {
