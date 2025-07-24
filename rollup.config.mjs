@@ -9,16 +9,16 @@ export default [
     output: [
       {
         name: 'nanoid-dictionary',
-        file: pkg.browser,
+        file: './dist/nanoid-dictionary.umd.js',
         format: 'umd'
       },
       {
         name: 'nanoid-dictionary',
-        file: pkg.main,
+        file: './dist/nanoid-dictionary.cjs',
         format: 'cjs',
       },
       { name: 'nanoid-dictionary',
-        file: pkg.module,
+        file: './dist/nanoid-dictionary.esm.js',
         format: 'es'
       },
     ],
