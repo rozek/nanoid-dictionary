@@ -9,14 +9,9 @@ Install nanoid and dictionary
 
 `npm i nanoid nanoid-dictionary`
 
-_Note_: If you plan on using `import` style ES6 syntax (or node complains that it can't find the named export of the thing you're importing from `nanoid-dictionary` please rather install the beta version, like this
-
-`npm i nanoid-dictionary@beta`
-
-
 ## Usage
 
-Require a `customAlphabet` from `nanoid` and pass a string from the dictionary:
+Require a [`customAlphabet`](https://github.com/ai/nanoid#custom-alphabet-or-size) from `nanoid` and pass a string from the dictionary:
 
 ```javascript
 import { customAlphabet } from 'nanoid';
@@ -24,7 +19,6 @@ import { lowercase } from 'nanoid-dictionary';
 
 const lowercaseRandomString = customAlphabet(lowercase, 10);
 ```
-
 
 ## Character sets
 
@@ -46,7 +40,7 @@ import { hexadecimalLowercase } from 'nanoid-dictionary';
 
 ### `hexadecimalUppercase`
 
-Lowercase English hexadecimal uppercase characters: `0123456789ABCDEF`
+Uppercase English hexadecimal uppercase characters: `0123456789ABCDEF`
 
 ```javascript
 import { hexadecimalUppercase } from 'nanoid-dictionary';
@@ -98,4 +92,21 @@ Complete set: `6789BCDFGHJKLMNPQRTWbcdfghjkmnpqrtwz`
 
 ```javascript
 import { nolookalikesSafe } from 'nanoid-dictionary';
+```
+
+### `cookieSafe`
+
+All the allowed characters for a cookie value defined in [RFC6225](https://www.rfc-editor.org/rfc/rfc6265.txt).
+
+```javascript
+import { cookieSafe } from 'nanoid-dictionary';
+```
+
+### `cookieUnsafe`
+
+All the characters that [actually work in modern browsers](https://stackoverflow.com/a/1969339).
+Might not be suitable for servers, use with caution.
+
+```javascript
+import { cookieUnsafe } from 'nanoid-dictionary';
 ```
